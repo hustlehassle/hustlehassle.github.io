@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+
+body {
+	background-color:#333;
+	font-family: 'Lato', sans-serif;
+	width: 100%;
+	height:100%;
+	background-image: url("./img/bg.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin:0;
+}
+#header {
+	width:100%;
+	color:white;
+	padding:10px;
+	position:fixed;
+}
+
+#nav {
+	float:right;
+	position:fixed;
+	top:0;
+	right:0;
+	padding:10px;
+}
+h2 {
+	padding:15px;
+}
+
+
+.section {
+	width: 100%;
+	height:100%;
+	position:relative;
+	overflow:hidden;
+	bottom:0;
+}
+
+#section iframe {
+	border:0;
+	width:100%;
+	height:85%;
+	position:absolute;
+	left:0;
+	bottom:0;
+}
+
+#footer {
+	background-color:#333;
+	width:100%;
+    text-align:center;
+	position: absolute;
+	bottom: 0;
+}
+
+
+ul {
+    list-style-type: none;
+    overflow: hidden;
+	font-weight:bold;
+	font-size:20px;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    padding: 14px 16px;
+	text-decoration: none;
+	color: white;
+}
+
+a {
+	text-decoration:none;
+	color:white;
+}
+</style>
+</head>
+<script type="text/javascript" language="javascript">
+	function checklist(ctrl)
+	{
+		var list = document.getElementById("menu").getElementsByTagName('li');
+		
+		for(i=0;i<list.length;i++){
+			list[i].style.background = '';
+		}
+		ctrl.style.background = '#47d147';
+	}
+</script>
+<body>
+<div id="header">
+<a href="index.html"><h2>John Mari Ocampo</h2></a>
+
+<div id="nav">
+<ul id="menu">
+    <li onclick="checklist(this);"><a href="educ.html" target="iframe1">Education</a></li>
+    <li onclick="checklist(this);"><a href="achieve.html" target="iframe1">Achievements</a></li>
+	<li onclick="checklist(this);"><a href="gallery.html" target="iframe1">Gallery</a></li>
+</ul>
+</div>
+</div>
+
+<div id="section">
+<iframe name ="iframe1" src="about.html"></iframe>
+</div>
+
+
+</body>
+</html>
